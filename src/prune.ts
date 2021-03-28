@@ -10,23 +10,25 @@ export interface PruneOptions {
   include?: string[];
 }
 
-
 export async function prune(options: PruneOptions) {
-  const start = process.hrtime();
   spinner.start('Start pruning...');
   const cwd = pathResolve(options.cwd || process.cwd());
   const cwdNodeModules = join(cwd, 'node_modules');
 
+  const start = process.hrtime();
   const info = await pruneDir({
     dirPath: cwdNodeModules,
     include: options.include,
     exclude: options.exclude,
   });
+  const [seconds, nanoSeconds] = process.hrtime(start);
+
   const prettySize = prettyBytes(info.size);
 
-  const [seconds, nanoSeconds] = process.hrtime(start);
   const diffMiliSeconds = (seconds * 1000 + nanoSeconds / 1e6).toFixed(3);
-  spinner.succeed(`Pruned ${info.total.dir} dirs, ${info.total.file} files, size: ${prettySize}, cost: ${diffMiliSeconds}ms`);
+  spinner.succeed(
+    `Pruned ${info.total.dir} dirs, ${info.total.file} files, size: ${prettySize}, cost: ${diffMiliSeconds}ms`,
+  );
 
   return info;
 }

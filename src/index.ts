@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import { program } from 'commander';
 import { pruneCommand } from './prune';
 
@@ -15,7 +13,7 @@ async function run() {
   program.on('--help', () => {
     console.log('');
     console.log('Example call:');
-    console.log('  $ nprune --help');
+    console.log('  $ np --help');
   });
 
   program.parse(process.argv);

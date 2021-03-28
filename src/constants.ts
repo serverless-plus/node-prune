@@ -88,16 +88,7 @@ const DEFAULT_DIRS: string[] = [
   '.github',
 ];
 
-const DEFAULT_EXTS: string[] = [
-  'markdown',
-  'md',
-  'mkd',
-  'ts',
-  'jst',
-  'coffee',
-  'tgz',
-  'swp',
-];
+const DEFAULT_EXTS: string[] = ['markdown', 'md', 'mkd', 'ts', 'jst', 'coffee', 'tgz', 'swp'];
 
 const DEFAULT_FILES_MAP: Record<string, boolean> = {};
 DEFAULT_FILES.forEach((item: string) => {
@@ -116,9 +107,4 @@ DEFAULT_EXTS.forEach((item: string) => {
 
 const IS_MOCK = process.env.MOCK;
 
-export {
-  IS_MOCK,
-  DEFAULT_FILES_MAP,
-  DEFAULT_DIRS_MAP,
-  DEFAULT_EXTS_MAP,
-};
+export { IS_MOCK, DEFAULT_FILES_MAP, DEFAULT_DIRS_MAP, DEFAULT_EXTS_MAP };

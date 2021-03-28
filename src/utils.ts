@@ -40,7 +40,7 @@ export function isPrune(filePath: string, fileStats: Stats, include: string[] = 
   const filename = basename(filePath);
   const ext = getFileExtention(filename);
 
-  for (let i = 0, len = include.length; i < len; i ++) {
+  for (let i = 0, len = include.length; i < len; i++) {
     if (minimatch(filePath, include[i])) {
       return true;
     }
@@ -67,7 +67,6 @@ export function isPrune(filePath: string, fileStats: Stats, include: string[] = 
 
   return false;
 }
-
 
 export async function pruneDir({
   dirPath,
@@ -127,7 +126,6 @@ export async function pruneDir({
         info.total.dir += subInfo.total.dir;
         info.total.file += subInfo.total.file;
       }
-
     } catch (e) {
       // no op´
     }

@@ -1,11 +1,11 @@
 {
   "name": "@slsplus/node-prune",
-  "version": "0.0.0",
-  "description": "Node prune tool",
-  "main": "./dist/index.js",
+  "version": "0.0.1",
+  "description": "Node prune tool, prune unnecessary files from ./node_modules, such as markdown, typescript source files, and so on",
+  "main": "./dist/src/index.js",
   "bin": {
-    "nprune": "dist/src/bin/node-prune.js",
-    "np": "dist/src/bin/node-prune.js"
+    "np": "dist/src/bin/index.js",
+    "nprune": "dist/src/bin/index.js"
   },
   "publishConfig": {
     "access": "public"
@@ -30,9 +30,9 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "ygsec && lint-staged",
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "ygsec && npm run lint:fix && npm run prettier:fix"
+      "pre-push": "npm run lint:fix && npm run prettier:fix"
     }
   },
   "lint-staged": {
@@ -58,7 +58,6 @@
     "@types/inquirer": "^7.3.1",
     "@types/minimatch": "^3.0.4",
     "@types/ora": "^3.2.0",
-    "chalk": "^4.1.0",
     "commander": "^6.1.0",
     "fast-glob": "^3.2.5",
     "fs-extra": "^9.0.1",
