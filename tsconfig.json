@@ -13,5 +13,5 @@
     "sourceMap": false,
     "strict": true
   },
-  "include": ["src/**/*", "package.json"]
+  "include": ["src/**/*", "package.json", "bin"]
 }

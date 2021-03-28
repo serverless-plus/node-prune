@@ -1,11 +1,10 @@
 {
   "name": "@slsplus/node-prune",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Node prune tool, prune unnecessary files from ./node_modules, such as markdown, typescript source files, and so on",
   "main": "./dist/src/index.js",
   "bin": {
-    "np": "dist/src/bin/index.js",
-    "nprune": "dist/src/bin/index.js"
+    "np": "./bin/index.js"
   },
   "publishConfig": {
     "access": "public"
