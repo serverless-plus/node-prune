@@ -5,7 +5,7 @@
 [![Build Status](https://github.com/serverless-plus/node-prune/workflows/Release/badge.svg?branch=master)](https://github.com/serverless-plus/node-prune/actions?query=workflow:Release+branch:master)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
-Node prune tool, prune unnecessary files from ./node_modules, such as markdown, typescript source files, and so on. **Inspired by golan version [node-prune](https://github.com/tj/node-prune)**.
+Node prune tool, prune unnecessary files from ./node_modules, such as markdown, typescript source files, and so on. **Inspired by golang version [tj/node-prune](https://github.com/tj/node-prune)**.
 
 ## Installation
 
