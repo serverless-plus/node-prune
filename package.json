@@ -59,7 +59,7 @@
     "@types/ora": "^3.2.0",
     "commander": "^6.1.0",
     "fast-glob": "^3.2.5",
-    "fs-extra": "^9.0.1",
+    "fs-extra": "^10.0.0",
     "inquirer": "^7.3.3",
     "minimatch": "^3.0.4",
     "ora": "^5.1.0",
